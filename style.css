@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+    --cor-fundo: #F0F0F0; /* Um tom claro de cinza para o fundo */
+    --cor-principal: #4CAF50; /* Verde vibrante para a caixa principal, remetendo a campos de futebol */
+    --cor-secundaria: #388E3C; /* Verde escuro para os botões, que combina com o tema do futebol */
+    --cor-destaque: #2C6B2F; /* Verde mais escuro para o destaque */
+    --cor-texto: #212121; /* Um tom escuro para o texto, bom contraste com o fundo claro */
+    --cor-borda: #DDDDDD; /* Cor clara para bordas e linhas */
+    --cor-sombra: rgba(0, 0, 0, 0.1); /* Sombra leve para um efeito mais sutil */
+    --cor-fundo-pixel: url('images.jpg'); /* Caminho para a imagem de fundo em pixel art */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    background-image: var(--cor-fundo-pixel); /* Adiciona a imagem de pixel art como fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: repeat; /* Repete a imagem se necessário */
+    color: var(--cor-texto);
+    font-family: 'Source Code Pro', monospace; /* Fonte com estilo técnico e moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px; /* Borda arredondada mais suave */
+    box-shadow: 0 8px 16px var(--cor-sombra); /* Sombra mais sutil e ampla para um efeito de elevação mais moderno */
+    border: 1px solid var(--cor-borda); /* Adiciona uma borda leve para um toque de sofisticação */
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2rem; /* Tamanho maior para destaque */
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Fonte mais limpa e moderna para subtítulos */
+    color: var(--cor-texto);
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: #FFF; /* Texto branco para contraste com o fundo escuro */
+    border: none;
+    border-radius: 25px; /* Borda mais arredondada para um visual mais moderno */
+    padding: 15px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição para o efeito de transformação */
+    box-shadow: 0 4px 8px var(--cor-sombra); /* Sombra sutil para um efeito de botão elevado */
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: scale(1.05); /* Efeito de aumento sutil no hover */
+}
+
+.caixa-resultado {
+    display: none;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento aumentado entre as alternativas */
+}
+
+.caixa-alternativas button {
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-borda); /* Borda leve para os botões de alternativas */
+    padding: 12px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.caixa-alternativas button:hover {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque); /* Cor da borda muda no hover para combinar com o fundo */
+}
